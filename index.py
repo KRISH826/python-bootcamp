@@ -32,3 +32,6 @@ print(_int,type(_int))
 
 _int='krishnendu'
 print(_int,type(_int))
+
+age = input('enter your age: ')
+print(age,type(age))
