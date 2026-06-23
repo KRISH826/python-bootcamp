@@ -95,6 +95,18 @@ for number in numbers:
         frequency[number] += 1
     else:
         frequency[number] = 1
-        
+
 print(frequency)
+
+
+# merge 2 dictonaries
+dict1={"a":1, "b":2, "c":3}
+dict2={"a": 2, "c": 5, "d": 6}
+
+merge_dict= {**dict1, **dict2} #merge dictonaries
+print(merge_dict)
+
+
+
+
 
