@@ -73,7 +73,7 @@ print(brandList)
 square=[n**2 for n in range(5)]
 print(square)
 
-# with condition
+# with condition 
 even = [num for num in range(10) if num%2 == 0]  
 print(even)
 
@@ -87,6 +87,11 @@ print(pair)
 words = ["hello", "krishnendu", "tanu", "rittik"]
 lengths = [len(word) for word in words]
 print(lengths)
+
+# nested list
+finalwords = [["hello", "krishnendu", "tanu", "rittik"], ["pocha", "ranu"], ["high", "low"]]
+
+print(finalwords[0][0:2])
 
 
 
