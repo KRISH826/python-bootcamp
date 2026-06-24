@@ -104,4 +104,28 @@ def is_palindrome(word):
 print(is_palindrome("aba"))
 
 
+# what is recursion? factoria
+# recursion is inside a function you are calling the same function
+
+factorial_num=5
+
+def factorial_func(n):
+    if(n==0):
+        return 1
+    else:
+        return n * factorial_func(n-1)
+
+print(factorial_func(5))
+
+import re
+
+def isValidEmail(email):
+    pattern = r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
+    return re.match(pattern, email) is not None
+
+print(isValidEmail("krishpanja.com"))
+print(isValidEmail("krishnendupanja98@gmail.com"))
+
+
+
 
