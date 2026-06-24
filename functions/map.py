@@ -20,8 +20,32 @@ added_num= list(map(lambda x,y: x+y, numbers2, numbers3))
 print(added_num)
 
 # map() convert list of strings into the integar
-str_numbers= ['1', '2', '3', '4']
+str_numbers= ['1', '2', '3', '5', "4"]
 integar_num= list(map(int, str_numbers))
 print(integar_num)
 
+words = ["apple", "cherry", "banana"]
+upperwords= list(map(str.upper, words))
+print(upperwords)
 
+# how to use dictionaries in the map
+dict = [
+    {
+        'name': 'krish',
+        'age': 32
+    },
+    {
+        'name': 'debjit',
+        'age': 27
+    }
+]
+
+def get_name(person):
+    return person["name"]
+
+person_result = list(map(get_name, dict))
+print(person_result)
+
+
+
+    
