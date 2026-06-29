@@ -40,5 +40,49 @@ print(personclass)
 print(repr(personclass))
 
 
+# we have common opertaor also
+
+# "__odd__(self,otger)": "Adds two objects using the + operator"
+# "__sub__(self, other)": Substracts two objects using the - operator"
+#"__mul__(self, other)": Multiplies two objects using the * operator"
+#"__truediv__(self, other)": Divides two objects using the / operator
+#"__eq__(self, other)": Compares two objects using the == operator
+#"__it__(self, other)": checks if one obeject is less than another using the operator
+
+
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+
+    def __sub__(self, other):
+        return Vector(self.x - other.x, self.y - other.y)
+
+    def __mul__(self, other):
+        return self.x * other.x + self.y * other.y
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+    
+    def __repr__(self):
+        return f"Vector({self.x}, {self.y})" 
+
+v1 = Vector(2,5) # that is default x y considered
+v2 = Vector(3,8) #this is the otehr considered
+
+print(v1 + v2)
+print(v1 * v2)
+
+
+# assignment
+
+
+
+
+
+
+
 
 

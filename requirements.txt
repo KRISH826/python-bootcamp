@@ -1,1 +1,5 @@
 numpy
+panda
+streamlit
+memory_profiler
+flask
