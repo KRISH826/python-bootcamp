@@ -1,1 +1,6 @@
 numpy
+panda
+streamlit
+memory_profiler
+flask
+scikit-learn
