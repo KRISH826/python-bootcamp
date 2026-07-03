@@ -1,6 +1,6 @@
 import nltk
 from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer, RegexpStemmer, SnowballStemmer
+from nltk.stem import PorterStemmer, RegexpStemmer, SnowballStemmer, WordNetLemmatizer
 from nltk.tokenize import word_tokenize, sent_tokenize
 
 stop_words = set(stopwords.words('english'))
@@ -30,7 +30,7 @@ paragraph = """I have three visions for India. In 3000 years of our history, peo
                I was lucky to have worked with all three of them closely and consider this the great opportunity of my life. 
                I see four milestones in my career"""
 
-
+lemma = WordNetLemmatizer()
 stemmer = nltk.SnowballStemmer("english") # PorterStemmer
 
 sentences = sent_tokenize(paragraph)
@@ -39,9 +39,11 @@ sentences = sent_tokenize(paragraph)
 # apply stopwords and filter and then apply stemming 
 for i in range(len(sentences)):
     words = nltk.word_tokenize(sentences[i])
-    stemmed_words = [stemmer.stem(word) for word in words if word not in stop_words]
+    stemmed_words = [lemma.lemmatize(word.lower(), pos="v") for word in words if word not in stop_words]
     fullsentence = " ".join(stemmed_words)
     print(fullsentence)
+
+
 
 
 
